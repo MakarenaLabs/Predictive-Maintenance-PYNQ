@@ -1,16 +1,10 @@
 from motor_controller import *
 from motor_status_logger import *
-from multiprocess_setting import *
-from multiprocess_function import *
+from support_function import *
 from DpuFocOverlay import *
 from config import *
-# from queue import Queue
-from multiprocessing import Process, Queue
-
 from pynq import allocate
-
 from json import JSONEncoder
-
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
@@ -73,7 +67,6 @@ def get_logger():
     return jsonify(ret)
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print("Loading Overlay")
     overlay = focDpuPL("../dpu.bit")
@@ -88,7 +81,5 @@ if __name__ == '__main__':
     input_buffer = allocate(shape=(256,), dtype=np.uint8)
     capture_address = input_buffer.physical_address
     logger_p = logger(motor_status, capture_address)
-
-    print(motor_status.mmio_blocks)
 
     app.run(host="0.0.0.0")
