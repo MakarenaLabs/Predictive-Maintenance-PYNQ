@@ -1,5 +1,7 @@
 # Predictive-Maintenance-PYNQ
 
+[MakarenaLabs s.r.l.](http://makarenalabs.com)
+
 This repo is the open-source implementation for the Predictive Maintenance of Xilinx made with MakarenaLabs.
 For more information about the other projects involved as dependencies please visit:
 * [Vitis AI Github Repository](https://www.xilinx.com/products/design-tools/vitis/vitis-ai.html).
