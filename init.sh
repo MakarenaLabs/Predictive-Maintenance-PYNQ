@@ -18,6 +18,7 @@ echo "\n------COPYING FOC EXAMPLE INTO JUPYTER HOME------\n"
 
 #############setup FOC+DPU example#################
 cp dpu-foc-predictive-maintenance.ipynb dpu_resnet50.xmodel $PYNQ_JUPYTER_NOTEBOOKS/pynq-dpu
+cp dpu.bit dpu.xclbin dpu.hwh $PYNQ_JUPYTER_NOTEBOOKS/pynq-dpu
 ###################################################
 
 echo "\n------SUCCESS, NOW GO TO "
