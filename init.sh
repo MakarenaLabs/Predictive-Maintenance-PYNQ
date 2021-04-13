@@ -6,7 +6,7 @@ git clone https://github.com/Xilinx/DPU-PYNQ.git
 cd DPU-PYNQ/upgrade
 sudo make
 
-echo "\n------MAKE COMPLETE, PROCEEDING BUILD-------\n"
+echo "\n------MAKE COMPLETE, PROCEEDING INSTALL-------\n"
 #install pynq-dpu
 pip3 install pynq-dpu
 cd $PYNQ_JUPYTER_NOTEBOOKS
