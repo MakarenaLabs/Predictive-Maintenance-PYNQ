@@ -20,8 +20,15 @@ To build the project you need to:
 * cd into the folder cloned and tap `chmod 755 init.sh && ./init.sh`. It will ask you the password, which is `xilinx` (same name as the account).
 * Once the installation has completed you can try the Jupyter Notebooks provided as an example under `pynq-dpu` installed in the jupyter folder.
 
-To run the flask server you need to tap `sudo python3 main.py` in the folder `pynq-foc-dpu-python-code`. Currently it is supported just the FOC interfacing.
-The server will run in local (w.r.t. the Ultra96-V2) on the port 5000.
+To run the flask server you need to tap `sudo python3 main.py` in the folder `pynq-foc-dpu-python-code`. 
+Currently it is supported just the FOC interfacing.
+The server will run in local (w.r.t. the Ultra96-V2) on the port 5000. For example, if your board has 192.168.2.5 IP address, the server is accessible through this address:
+192.168.2.5:5000
+
+Note that the python process is not detached, so you need to keep your SSH terminal active.
+
+The documentation of Flask API server is here:
+https://github.com/MakarenaLabs/Predictive-Maintenance-PYNQ/tree/main/pynq-foc-dpu-python-code
 
 # Notes for Installation
 The script `init.sh` will download and install the project [DPU-PYNQ](https://github.com/Xilinx/DPU-PYNQ) needed to interface the DPU.
